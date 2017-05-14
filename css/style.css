@@ -1,0 +1,292 @@
+/* scroll */
+::-webkit-scrollbar {
+      width: 15px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #EEEEF4;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+      background-color: #BBBBDD; border-radius: 10%;
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+      background-color: #EEEEF4;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be
+styled */
+/* scroll */
+/* fix-to-top */
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(246, 96, 44, 0.56) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #F6602C;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+/* fix-to-top */
+@media(max-width: 769px){
+	.btn-eskla
+	{
+		margin-top: 20px;
+		width: 100%;
+	}
+}
+@media(max-width: 1024px){
+	.col-eskla
+	{
+		text-align: center;
+	}
+	.form-line{
+		border: hidden !important;
+	}
+}
+@media screen and (min-width: 310px) {
+	.why-choose-md{
+		margin-bottom: 50px;
+	}
+	.form-line{
+		text-align: center;
+	}
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: #AF3308;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #fff;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border-color: none;
+}
+.ft-section{
+	background: #000;
+	padding-top:80px;
+	padding-bottom:80px;
+	color:#fff;
+}
+.ft-list a:hover{
+	color: #F6602C;
+	text-decoration: none;
+}
+.ft-list a{
+	color: #fff;
+}
+.ft-list{
+	list-style:none;
+	padding-left:0px;
+}
+.ft a{
+	line-height: 3;
+}
+.ft i{
+	line-height: 3;
+}
+.news-sub-title{
+	font-style: italic;
+	color: #fff;
+	height: 60px;
+	text-align:center;
+	left:20%;
+	right: 20%;
+	position:absolute;
+	top:200px;
+}
+.news-title{
+	color: #fff;
+	font-weight: bold;
+	height: 60px;
+	text-align:center;
+	left:20%;
+	right: 20%;
+	position:absolute;
+	top:150px;
+}
+.news{
+	background: url(../img/background_img.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+.lake{
+	padding-bottom: 40px;
+	padding-top: 10px;
+}
+.col-lake p{
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+	padding-top: 20px;
+}
+.overlay a:hover{
+	color: #F6602C;
+	text-decoration: none;
+}
+/* text-section */
+::selection {
+	background: rgba(246, 96, 44, 0.6); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+	background: rgba(246, 96, 44, 0.6); /* Gecko Browsers */
+}
+/* text-section */
+.service-icon i{
+	color: #fff;
+	font-size: 22px;
+	line-height: 60px;
+}
+.service-icon{
+	background: #F6602C;
+	width:60px;
+	height: 60px;
+	text-align:center;
+	left:40%;
+	position:absolute;
+	top:-40px;
+	border-radius: 100%;
+}
+.why-choose-pd{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.why-choose h4{
+	font-weight: bold;
+}
+.why-choose a{
+	color: #F6602C;
+}
+.why-choose a:hover{
+	color: #000;
+	text-decoration: none;
+}
+.why-choose{
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+}
+.parallax {
+	/* The image used */
+	background-image: url("../img/slider_04.png");
+
+	/* Set a specific height */
+	min-height: 300px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.best-offer-pd{
+	padding-top: 40px;
+}
+.best-offer-sec-title{
+	font-style: italic;
+	color: #F47814;
+}
+.eskala-title{
+	font-weight: bolder;
+}
+.eskala-title-color{
+	font-weight: bolder;
+	color: #fff;
+}
+.img_hover-pd{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.btn-eskla{
+	background: #F6602C;
+	padding: 22px 20px;
+	color: #fff;
+}
+.form-bd{
+	border:1px solid gray;
+	color:#F6602C;
+}
+.form-row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.form-bg{
+	background: #f7f7f7;
+	color:#F6602C;
+}
+.form-line{
+	border-right:5px solid #F6602C;
+}
+.nav-ul-pad-top{
+	padding-top: 4px;
+	text-align: center;
+}
+.hvr-underline-reveal:before{
+	background: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	color: #fff;
+}
+.navbar-default .navbar-nav > li > a{
+	color: #fff;
+}
+.navbar-nav > li > a{
+	color: #fff;
+}
+.navbar-eskla{
+	background-color: rgba(136, 136, 136, 0.639216);
+	border: none;
+}
+@font-face {
+	font-family: 'Raleway-Regular';
+	src:url(../fonts/Raleway-Regular.ttf) format('truetype');
+}
+body {
+	height: 4000px;
+	font-family: 'Raleway-Regular', sans-serif;
+}
